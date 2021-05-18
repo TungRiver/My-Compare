@@ -70,9 +70,11 @@ namespace DAL
                 CalStart(ref start, str, vss[i].KeyStr);
                 vss[i].StartIndex = start;
             }
+            
             for (int i = 0; i < vss.Count-1; i++)
             {
-                vss[i].EndIndex = vss[i].StartIndex-2;
+                if (0 == i) vss[i].EndIndex = vss[i + 1].StartIndex - 1;
+                else vss[i].EndIndex = vss[i+1].StartIndex-2;
             }
         }
         public static void CalStart(ref int start, string s, string subs)

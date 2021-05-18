@@ -73,7 +73,7 @@ namespace My_Compare
             {
                 if (lineOfText.Contains("---------------"))
                 {
-                    tb.AppendText("===================    " + i.ToString() + "行\r\n");
+                    //tb.AppendText("===================    " + i.ToString() + "行\r\n");
                     while ((lineOfText = file.ReadLine()) != null)
                     {
 
@@ -200,13 +200,33 @@ namespace My_Compare
             p.Intila(cmB1.Text);
         }
 
-        ////const int WM_USER = 0x400;
+        private void cmB1_TextChanged(object sender, EventArgs e)
+        {
+            List<string> res= UI.ShowPathList(cmB1.Text, cmB1);
+            if (res != null && 0 != res.Count)
+            {
+                //cmB1.AutoCompleteSource = AutoCompleteSource.ListItems;
+                //cmB1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                for (int i = 0; i < res.Count; i++)
+                {
+                    cmB1.Items.Add(res[i]);
+                }
 
-        ////const int EM_GETSCROLLPOS = WM_USER + 221;
+            }
+        }
 
-        ////const int EM_SETSCROLLPOS = WM_USER + 222;
+        private void cmB1_MouseClick(object sender, MouseEventArgs e)
+        {
+            //cmB1.Text = cmB1.SelectedText;
+        }
 
-        //[System.Runtime.InteropServices.DllImport("user32.dll")]
-        //static extern int SendMessage(IntPtr hWnd, int msg, int wParam, ref Point lParam);
+        private void cmB1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           cmB1.Text = cmB1.SelectedItem.ToString();
+        }
+
+        private void cmB1_DropDown(object sender, EventArgs e)
+        {
+        }
     }
 }

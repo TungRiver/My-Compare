@@ -37,10 +37,10 @@
             this.cmB1 = new System.Windows.Forms.ComboBox();
             this.cmB2 = new System.Windows.Forms.ComboBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.btOpen1 = new System.Windows.Forms.Button();
-            this.btOpen2 = new System.Windows.Forms.Button();
             this.rTB1 = new System.Windows.Forms.RichTextBox();
             this.rTB2 = new System.Windows.Forms.RichTextBox();
+            this.btOpen1 = new System.Windows.Forms.Button();
+            this.btOpen2 = new System.Windows.Forms.Button();
             this.panelTop.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -135,18 +135,22 @@
             // 
             // cmB1
             // 
+            this.cmB1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmB1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmB1.FormattingEnabled = true;
-            this.cmB1.Location = new System.Drawing.Point(25, 54);
+            this.cmB1.Location = new System.Drawing.Point(25, 57);
             this.cmB1.Name = "cmB1";
             this.cmB1.Size = new System.Drawing.Size(386, 24);
             this.cmB1.TabIndex = 4;
+            this.cmB1.DropDown += new System.EventHandler(this.cmB1_DropDown);
+            this.cmB1.TextChanged += new System.EventHandler(this.cmB1_TextChanged);
             // 
             // cmB2
             // 
+            this.cmB2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmB2.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmB2.FormattingEnabled = true;
-            this.cmB2.Location = new System.Drawing.Point(577, 55);
+            this.cmB2.Location = new System.Drawing.Point(577, 58);
             this.cmB2.Name = "cmB2";
             this.cmB2.Size = new System.Drawing.Size(279, 22);
             this.cmB2.TabIndex = 5;
@@ -172,30 +176,6 @@
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 6;
             this.splitContainer1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer1_SplitterMoved);
-            // 
-            // btOpen1
-            // 
-            this.btOpen1.FlatAppearance.BorderSize = 0;
-            this.btOpen1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btOpen1.Image = ((System.Drawing.Image)(resources.GetObject("btOpen1.Image")));
-            this.btOpen1.Location = new System.Drawing.Point(417, 56);
-            this.btOpen1.Name = "btOpen1";
-            this.btOpen1.Size = new System.Drawing.Size(34, 20);
-            this.btOpen1.TabIndex = 7;
-            this.btOpen1.UseVisualStyleBackColor = true;
-            this.btOpen1.Click += new System.EventHandler(this.btOpen1_Click);
-            // 
-            // btOpen2
-            // 
-            this.btOpen2.FlatAppearance.BorderSize = 0;
-            this.btOpen2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btOpen2.Image = ((System.Drawing.Image)(resources.GetObject("btOpen2.Image")));
-            this.btOpen2.Location = new System.Drawing.Point(862, 56);
-            this.btOpen2.Name = "btOpen2";
-            this.btOpen2.Size = new System.Drawing.Size(34, 20);
-            this.btOpen2.TabIndex = 8;
-            this.btOpen2.UseVisualStyleBackColor = true;
-            this.btOpen2.Click += new System.EventHandler(this.btOpen2_Click);
             // 
             // rTB1
             // 
@@ -224,6 +204,30 @@
             this.rTB2.Text = "";
             this.rTB2.WordWrap = false;
             this.rTB2.VScroll += new System.EventHandler(this.rTB2_VScroll);
+            // 
+            // btOpen1
+            // 
+            this.btOpen1.FlatAppearance.BorderSize = 0;
+            this.btOpen1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btOpen1.Image = ((System.Drawing.Image)(resources.GetObject("btOpen1.Image")));
+            this.btOpen1.Location = new System.Drawing.Point(417, 59);
+            this.btOpen1.Name = "btOpen1";
+            this.btOpen1.Size = new System.Drawing.Size(34, 20);
+            this.btOpen1.TabIndex = 7;
+            this.btOpen1.UseVisualStyleBackColor = true;
+            this.btOpen1.Click += new System.EventHandler(this.btOpen1_Click);
+            // 
+            // btOpen2
+            // 
+            this.btOpen2.FlatAppearance.BorderSize = 0;
+            this.btOpen2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btOpen2.Image = ((System.Drawing.Image)(resources.GetObject("btOpen2.Image")));
+            this.btOpen2.Location = new System.Drawing.Point(862, 59);
+            this.btOpen2.Name = "btOpen2";
+            this.btOpen2.Size = new System.Drawing.Size(34, 20);
+            this.btOpen2.TabIndex = 8;
+            this.btOpen2.UseVisualStyleBackColor = true;
+            this.btOpen2.Click += new System.EventHandler(this.btOpen2_Click);
             // 
             // FrmCompare
             // 
